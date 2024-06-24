@@ -1,0 +1,2 @@
+# LafaeX
+My Latex Template
