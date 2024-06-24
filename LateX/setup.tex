@@ -1,0 +1,87 @@
+% Author:   Giorgio Färber
+% Date:     2024-04
+
+\documentclass[11pt, titlepage, twoside]{scrreprt}
+
+%% Import all packages %%
+
+% Language and Fonts
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage[T1]{fontenc}
+
+% Page formatting
+\usepackage{geometry}
+\usepackage{scrlayer-scrpage}
+\usepackage{textcmds}
+\usepackage{lastpage}
+\geometry{
+    paper=a4paper,
+    inner=2.0cm, % Inner margin
+    outer=2.0cm, % Outer margin
+    bindingoffset=0.0cm, % Binding offset
+    top=2.0cm, % Top margin
+    bottom=2.0cm, % Bottom margin
+}
+
+% Maths
+\usepackage{amsmath}
+\usepackage{eqparbox}
+
+% SI unit Syntax
+\usepackage{siunitx}
+
+% Tables and Graphics
+\usepackage{graphicx}
+\usepackage{booktabs}
+
+% Bibliography
+\usepackage[
+   natbib=true,
+   style=numeric,
+   sorting=none
+   ]
+   {biblatex}
+% \usepackage{biblatex}
+\addbibresource{Sources.bib}
+\usepackage{pdfpages}
+
+% Glossary
+\usepackage[acronym, toc]{glossaries}
+\usepackage[automake]{glossaries-extra}
+\input{Text/special-pages/glossary.tex}
+\makeglossaries
+
+% Hyperref
+\usepackage{hyperref}
+% Define the color of the links
+\hypersetup{
+    colorlinks=false,
+    linkcolor=black,
+    filecolor=magenta,
+    urlcolor=blue,
+}
+
+%%* End packages section *%%
+
+%%* Pagestyle and Commands *%%
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
+\newcommand{\Paragraph}{\par\bigskip}
+\linespread{1.25}
+
+\pagestyle{scrheadings}
+\clearpairofpagestyles
+\ihead{Title / Author / Date}
+\ohead{Author}
+\cfoot{\thepage}
+\setlength{\marginparwidth}{2cm}
+\setlength\headheight{17pt}
+\setlength{\parindent}{0pt}
+
+% When should the counter be reset?
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\numberwithin{equation}{section}
+
+%%* End of SETUP *%%

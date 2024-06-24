@@ -1,0 +1,49 @@
+
+%* Setup *%
+\input{setup.tex}
+
+
+\begin{document}
+
+%* Title Page *%
+\input{Text/special-pages/titlepage.tex}
+\setcounter{page}{1}
+
+%* Abstract(s) *%
+% \input{...}
+
+
+%* The Tables *%
+\tableofcontents
+\listoffigures
+\listoftables
+\newpage
+
+
+%* Glossary *%
+% \section*{Glossaryyyy}
+\printglossary[title=Glossary, toctitle=Acronyms,type=\acronymtype]
+\printglossary[title=Glossary, toctitle=Glossary]
+\clearpage
+
+%* Start of page-counter *%
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+% Start of the Thesis %
+%%%%%%%%%%%%%%%%%%%%%%%
+\input{chapters.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%  End of the Thesis  %
+%%%%%%%%%%%%%%%%%%%%%%%
+% \section{References}
+% \printbibliography
+
+% \section{Appendix}
+% % \input{Latex/txt/appendix.tex}
+
+% \section{Declaration of Authorship}
+% % \input{Latex/txt/declaration_of_authorship.tex}
+
+\end{document}
